@@ -22,8 +22,9 @@ namespace ScripturePublishingEntity.Entities
         public int ProcessStepID { get; set; }
 
         [Column(Order = 3)]
+        [StringLength(128)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int UserID { get; set; }
+        public string UserID { get; set; }
 
         public string ParameterData { get; set; }
 
