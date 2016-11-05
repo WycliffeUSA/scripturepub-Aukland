@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using ScripturePublishingEntity;
+using ScripturePublishingService.Factory;
 using ScripturePublishingService.Services;
 
 namespace ScripturePublishing.Helpers
@@ -16,7 +18,7 @@ namespace ScripturePublishing.Helpers
 
         public static List<SelectListItem> GetProcessList()
         {
-            return _processService.GetProcesses().Select(p => new SelectListItem
+            return ServiceFactory.GetProcessService(new WorkflowEngine()).GetProcesses().Select(p => new SelectListItem
             {
                 Value = p.Id.ToString(),
                 Text = p.Name
@@ -25,7 +27,7 @@ namespace ScripturePublishing.Helpers
 
         public static List<SelectListItem> GetProcessList(int processId)
         {
-            return _processService.GetProcesses().Select(p => new SelectListItem
+            return ServiceFactory.GetProcessService(new WorkflowEngine()).GetProcesses().Select(p => new SelectListItem
             {
                 Value = p.Id.ToString(),
                 Text = p.Name,

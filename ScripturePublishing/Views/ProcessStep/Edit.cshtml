@@ -11,10 +11,10 @@
     @Html.HiddenFor(m => m.ID)
 
     <div>
-        Action Type Name: @Html.TextBoxFor(m => m.ActionTypeId, ActionTypeHelper.GetActionTypeList(Model.ActionTypeId))
+        Action Type Name: @Html.DropDownListFor(m => m.ActionTypeId, ActionTypeHelper.GetActionTypeList(Model.ActionTypeId))
     </div>
     <div>
-        Process Name: @Html.TextBoxFor(m => m.ProcessId, ProcessHelper.GetProcessList(Model.ProcessId))
+        Process Name: @Html.DropDownListFor(m => m.ProcessId, ProcessHelper.GetProcessList(Model.ProcessId))
     </div>
     <button >@Html.ActionLink("BACK", "Index", "ProcessStep")</button>
     <input type="submit" value="UPDATE" />

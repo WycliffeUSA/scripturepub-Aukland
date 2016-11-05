@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using ScripturePublishingEntity;
+using ScripturePublishingService.Factory;
 using ScripturePublishingService.Services;
 
 namespace ScripturePublishing.Helpers
@@ -16,7 +18,7 @@ namespace ScripturePublishing.Helpers
 
         public static List<SelectListItem> GetActionTypeList()
         {
-            return _actionTypeService.GetActionTypes().Select(a => new SelectListItem
+            return ServiceFactory.GetActionTypeService(new WorkflowEngine()).GetActionTypes().Select(a => new SelectListItem
             {
                 Value = a.ID.ToString(),
                 Text = a.ActionName
@@ -25,7 +27,7 @@ namespace ScripturePublishing.Helpers
 
         public static List<SelectListItem> GetActionTypeList(int actionTypeId)
         {
-            return _actionTypeService.GetActionTypes().Select(a => new SelectListItem
+            return ServiceFactory.GetActionTypeService(new WorkflowEngine()).GetActionTypes().Select(a => new SelectListItem
             {
                 Value = a.ID.ToString(),
                 Text = a.ActionName,

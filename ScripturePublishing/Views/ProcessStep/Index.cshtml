@@ -1,5 +1,6 @@
 ﻿@model List<ScripturePublishing.Models.ProcessStepDto> 
 @using System.Web.Mvc.Html
+@using ScripturePublishing.Helpers
 
 @{
     ViewBag.Title = "Index";
@@ -42,8 +43,8 @@
         }
         <tr>
             <td>@(Model.Count + 1)</td>
-            <td>@Html.DropDownList("actionTypeId", GetActionTypeList())</td>
-            <td>@Html.DropDownList("processId", GetProcessList())</td>
+            <td>@Html.DropDownList("actionTypeId", ActionTypeHelper.GetActionTypeList())</td>
+            <td>@Html.DropDownList("processId", ProcessHelper.GetProcessList())</td>
         </tr>
     </table>
     <input type="submit" value="ADD"/>

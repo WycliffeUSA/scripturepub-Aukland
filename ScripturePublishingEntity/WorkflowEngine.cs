@@ -20,6 +20,7 @@ namespace ScripturePublishingEntity
         public virtual DbSet<ResultType> ResultTypes { get; set; }
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<Parameter> Parameters { get; set; }
+        public virtual DbSet<ActionType> ActionTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

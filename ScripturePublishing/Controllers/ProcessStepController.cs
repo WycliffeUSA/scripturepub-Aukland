@@ -91,43 +91,5 @@ namespace ScripturePublishing.Controllers
             // _processService.Delete(processStep);
             return Index();
         }
-
-        public List<SelectListItem> GetActionTypeList()
-        {
-            return _actionTypeService.GetActionTypes().Select(a => new SelectListItem
-            {
-                Value = a.ID.ToString(),
-                Text = a.ActionName
-            }).ToList();
-        }
-
-        public List<SelectListItem> GetActionTypeList(int actionTypeId)
-        {
-            return _actionTypeService.GetActionTypes().Select(a => new SelectListItem
-            {
-                Value = a.ID.ToString(),
-                Text = a.ActionName,
-                Selected = a.ID == actionTypeId
-            }).ToList();
-        }
-
-        public List<SelectListItem> GetProcessList()
-        {
-            return _processService.GetProcesses().Select(p => new SelectListItem
-            {
-                Value = p.Id.ToString(),
-                Text = p.Name
-            }).ToList();
-        }
-
-        public List<SelectListItem> GetProcessList(int processId)
-        {
-            return _processService.GetProcesses().Select(p => new SelectListItem
-            {
-                Value = p.Id.ToString(),
-                Text = p.Name,
-                Selected = p.Id == processId
-            }).ToList();
-        }
     }
 }

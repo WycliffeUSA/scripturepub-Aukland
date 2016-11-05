@@ -7,3 +7,4 @@ C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\bin\Debug\Entity
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\bin\Debug\EntityFramework.SqlServer.xml
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\obj\Debug\ScripturePublishingEntity.dll
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\obj\Debug\ScripturePublishingEntity.pdb
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\obj\Debug\ScripturePublishingEntity.csprojResolveAssemblyReference.cache
