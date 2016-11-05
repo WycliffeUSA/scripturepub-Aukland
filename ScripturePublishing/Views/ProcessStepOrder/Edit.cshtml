@@ -1,0 +1,26 @@
+﻿@model ScripturePublishing.Models.ProcessStepOrderDto
+@using ScripturePublishing.Helpers
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Process Step Orderings</h2>
+
+
+@using (Html.BeginForm("Edit", "ProcessStepOrder", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.ID)
+
+    <div>
+        Last Process Step Order ID: @Html.DropDownListFor(m => m.LastProcessStepId, ProcessStepHelper.GetProcessStepList(Model.LastProcessStepId))
+    </div>
+    <div>
+        Next Process Step Order ID: @Html.DropDownListFor(m => m.NextProcessStepId, ProcessStepHelper.GetProcessStepList(Model.NextProcessStepId))
+    </div>
+    <div>
+        Result Type ID: @Html.DropDownListFor(m => m.ResultTypeId, ResultTypeHelper.GetResultTypeList(Model.ResultTypeId))
+    </div>
+    <button>@Html.ActionLink("BACK", "Index", "ProcessStepOrder")</button>
+    <input type="submit" value="UPDATE" />
+}

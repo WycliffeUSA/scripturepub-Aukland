@@ -1,4 +1,7 @@
-﻿using ScripturePublishingEntity.Repositories;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ScripturePublishingEntity.Entities;
+using ScripturePublishingEntity.Repositories;
 
 namespace ScripturePublishingService.Services
 {
@@ -9,6 +12,16 @@ namespace ScripturePublishingService.Services
         public ResultTypeService(IResultTypeRepository resultTypeRepository)
         {
             _resultTypeRepository = resultTypeRepository;
+        }
+
+        public ResultType GetById(int id)
+        {
+            return _resultTypeRepository.GetById(id);
+        }
+
+        public List<ResultType> GetResultTypes()
+        {
+            return _resultTypeRepository.Get().ToList();
         }
     }
 }

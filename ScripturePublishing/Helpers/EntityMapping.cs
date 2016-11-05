@@ -16,5 +16,17 @@ namespace ScripturePublishing.Helpers
                 ProcessName = processName
             };
         }
+
+        public static ProcessStepOrderDto MapDto(this ProcessStepOrder processStepOrder, string resultTypeDescription)
+        {
+            return new ProcessStepOrderDto
+            {
+                ID = processStepOrder.ID,
+                LastProcessStepId = processStepOrder.LastProcessStepID,
+                NextProcessStepId = processStepOrder.NextProcessStepID,
+                ResultTypeId = processStepOrder.ResultTypeID,
+                ResultTypeDescription = resultTypeDescription
+            };
+        }
     }
 }

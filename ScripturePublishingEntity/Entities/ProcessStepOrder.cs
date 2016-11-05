@@ -13,9 +13,9 @@ namespace ScripturePublishingEntity.Entities
         [Column(Order = 0)]
         public int ID { get; set; }
 
-        public int? LastActionID { get; set; }
+        public int? LastProcessStepID { get; set; }
 
-        public int? NextActionID { get; set; }
+        public int? NextProcessStepID { get; set; }
 
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

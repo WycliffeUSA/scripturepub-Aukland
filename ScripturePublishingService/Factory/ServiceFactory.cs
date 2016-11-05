@@ -15,5 +15,15 @@ namespace ScripturePublishingService.Factory
         {
             return new ProcessService(new ProcessRepository(context));
         }
+
+        public static ProcessStepService GetProcessStepService(WorkflowEngine context)
+        {
+            return new ProcessStepService(new ProcessStepRepository(context));
+        }
+
+        public static ResultTypeService GetResultTypeService(WorkflowEngine context)
+        {
+            return new ResultTypeService(new ResultTypeRepository(context));
+        }
     }
 }
