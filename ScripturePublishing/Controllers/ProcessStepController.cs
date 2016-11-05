@@ -84,11 +84,13 @@ namespace ScripturePublishing.Controllers
             return View(processStep.MapDto(actionType.ActionName, process.Name));
         }
 
-        [HttpPost]
+        [HttpGet]
         public ActionResult Delete(int id)
         {
-            // _processService.Delete(processStep);
-            return Index();
+            var processStep = _processStepService.GetProcessStepById(id);
+            _processStepService.Delete(processStep);
+            _uow.Save();
+            return RedirectToAction("Index");
         }
     }
 }

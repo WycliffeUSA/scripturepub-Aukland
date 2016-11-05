@@ -302,7 +302,7 @@
     <Content Include="Views\ProcessStepOrder\Edit.cshtml" />
 
     <Content Include="Views\Parameter\Index.cshtml" />
-    <Content Include="Views\Parameter\Edit.cshtml" />  </ItemGroup>
+    <Content Include="Views\Parameter\Edit.cshtml" />
     <Content Include="Views\Step\ChooseProcess.cshtml" />
     <Content Include="Views\Step\index.cshtml" />
   </ItemGroup>  <ItemGroup>

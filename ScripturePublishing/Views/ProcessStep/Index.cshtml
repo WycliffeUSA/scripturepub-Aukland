@@ -6,21 +6,6 @@
     ViewBag.Title = "Index";
 }
 
-<script>
-    function remove(id2) {
-        $.ajax({
-            url: "/ProcessStep/Delete/",
-            type: "POST",
-            contentType: "application/json",
-            data: { id:id2 },
-            success: function(response) {
-                response ? alert("It worked!") : alert("It didn't work.");
-            }
-        });
-        alert(id);
-    }
-</script>
-
 <h2>Process Steps</h2>
 
 @using (Html.BeginForm("Index", "ProcessStep", FormMethod.Post))
@@ -37,12 +22,11 @@
                 <td>@Html.ActionLink(processStep.ID.ToString(), "Edit", "ProcessStep", new { id = processStep.ID }, null)</td>
                 <td>@processStep.ActionTypeName</td>
                 <td>@processStep.ProcessName</td>
-                @*<td><button>@Ajax.ActionLink("X", "Delete", "Process", new { id = process.Id }, new AjaxOptions { HttpMethod = "POST" })</button></td>*@
-               <td><button onclick="remove(@processStep.ID)">X</button></td>
+                <td><button>@Html.ActionLink("X", "Delete", "ProcessStep", new { id = processStep.ID }, null)</button></td>
             </tr>
         }
         <tr>
-            <td>@(Model.Count + 1)</td>
+            <td></td>
             <td>@Html.DropDownList("actionTypeId", ActionTypeHelper.GetActionTypeList())</td>
             <td>@Html.DropDownList("processId", ProcessHelper.GetProcessList())</td>
         </tr>

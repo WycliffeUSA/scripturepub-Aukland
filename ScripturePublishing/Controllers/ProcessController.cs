@@ -50,11 +50,13 @@ namespace ScripturePublishing.Controllers
             return View(process);
         }
 
-        [HttpPost]
+        [HttpGet]
         public ActionResult Delete(int id)
         {
-           // _processService.Delete(process);
-            return Index();
+            var process = _processService.GetProcessById(id);
+            _processService.Delete(process);
+            _uow.Save();
+            return RedirectToAction("Index");
         }
     }
 }

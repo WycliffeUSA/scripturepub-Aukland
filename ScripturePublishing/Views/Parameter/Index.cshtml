@@ -5,21 +5,6 @@
     ViewBag.Title = "Index";
 }
 
-<script>
-    function remove(id2) {
-        $.ajax({
-            url: "/Parameter/Delete/",
-            type: "POST",
-            contentType: "application/json",
-            data: { id:id2 },
-            success: function(response) {
-                response ? alert("It worked!") : alert("It didn't work.");
-            }
-        });
-        alert(id);
-    }
-</script>
-
 <h2>Parameters</h2>
 
 @using (Html.BeginForm("Index", "Parameter", FormMethod.Post))
@@ -40,12 +25,11 @@
                 <td>@parameter.Name</td>
                 <td>@parameter.Text</td>
                 <td>@parameter.ProcessStepId</td>
-                @*<td><button>@Ajax.ActionLink("X", "Delete", "Process", new { id = process.Id }, new AjaxOptions { HttpMethod = "POST" })</button></td>*@
-                <td><button onclick="remove(@parameter.ID)">X</button></td>
+                <td><button>@Html.ActionLink("X", "Delete", "Parameter", new { id = parameter.ID }, null)</button></td>
             </tr>
         }
         <tr>
-            <td>@(Model.Count + 1)</td>
+            <td></td>
             <td>@Html.TextBox("type")</td>
             <td>@Html.TextBox("name")</td>
             <td>@Html.TextBox("text")</td>
