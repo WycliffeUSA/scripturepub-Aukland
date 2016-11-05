@@ -294,6 +294,10 @@
       <Project>{f4d79eb3-473b-4685-8f31-edd1f7fd1012}</Project>
       <Name>ScripturePublishingEntity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ScripturePublishingService\ScripturePublishingService.csproj">
+      <Project>{C63D1DD5-55F0-4DD8-9FC6-823B2933D1C6}</Project>
+      <Name>ScripturePublishingService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

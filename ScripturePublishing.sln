@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScripturePublishingEntity",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScripturePublishing", "ScripturePublishing\ScripturePublishing.csproj", "{5BB98D1C-8A8A-43A3-9908-8D66F7F2A12B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScripturePublishingService", "ScripturePublishingService\ScripturePublishingService.csproj", "{C63D1DD5-55F0-4DD8-9FC6-823B2933D1C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5BB98D1C-8A8A-43A3-9908-8D66F7F2A12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BB98D1C-8A8A-43A3-9908-8D66F7F2A12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BB98D1C-8A8A-43A3-9908-8D66F7F2A12B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63D1DD5-55F0-4DD8-9FC6-823B2933D1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63D1DD5-55F0-4DD8-9FC6-823B2933D1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63D1DD5-55F0-4DD8-9FC6-823B2933D1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63D1DD5-55F0-4DD8-9FC6-823B2933D1C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
