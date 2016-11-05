@@ -7,6 +7,7 @@ using ScripturePublishingService.Services;
 
 namespace ScripturePublishing.Controllers
 {
+    [Authorize]
     public class ParameterController : Controller
     {
         private readonly IParameterService _parameterService;

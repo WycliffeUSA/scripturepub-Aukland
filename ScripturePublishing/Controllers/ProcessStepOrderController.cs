@@ -7,6 +7,7 @@ using ScripturePublishingService.Services;
 
 namespace ScripturePublishing.Controllers
 {
+    [Authorize]
     public class ProcessStepOrderController : Controller
     {
         private readonly IProcessStepOrderService _processStepOrderService;

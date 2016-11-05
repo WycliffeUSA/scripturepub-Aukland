@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
-using System.Web.Services;
 using ScripturePublishing.Helpers;
 using ScripturePublishing.Models;
 using ScripturePublishingEntity.Entities;
@@ -9,6 +7,7 @@ using ScripturePublishingService.Services;
 
 namespace ScripturePublishing.Controllers
 {
+    [Authorize]
     public class ProcessStepController : Controller
     {
         private readonly IProcessStepService _processStepService;

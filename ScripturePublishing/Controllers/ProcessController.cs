@@ -4,6 +4,7 @@ using ScripturePublishingService.Services;
 
 namespace ScripturePublishing.Controllers
 {
+    [Authorize]
     public class ProcessController : Controller
     {
         private readonly IProcessService _processService;
