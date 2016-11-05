@@ -19,7 +19,7 @@
                 <td>@Html.ActionLink(process.Id.ToString(), "Edit", "Process", new { id = process.Id }, null)</td>
                 <td>@process.Name</td>
                 <td>@process.Version</td>
-                <td><button>@Html.ActionLink("X", "Delete", "Process", new { id = process.Id }, null)</button></td>
+                @*<td><button>@Html.ActionLink("X", "Delete", "Process", new { id = process.Id }, null)</button></td>*@
             </tr>
         }
         <tr>
