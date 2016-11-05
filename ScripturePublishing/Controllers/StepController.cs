@@ -7,6 +7,8 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
+using ScripturePublishingService.Services;
+
 
 namespace ScripturePublishing.Controllers
 {
@@ -19,14 +21,18 @@ namespace ScripturePublishing.Controllers
         IProcessRepository _processRepository;
         IParameterRepository _parametersRepository;
         IProcessStepOrderRepository _processStepOrderRepository;
+        IUnitOfWork _unitOfWork;
+        IActionTypeRepository _actionTypeRepository;
 
-        public StepController(IResultTypeRepository resultTypeRepository, IStateRepository stateRepository, IProcessStepRepository processStepRepository, IProcessRepository processRepository, IParameterRepository parameterRepository, IProcessStepOrderRepository processStepOrderRepository) {
+        public StepController(IResultTypeRepository resultTypeRepository, IStateRepository stateRepository, IProcessStepRepository processStepRepository, IProcessRepository processRepository, IParameterRepository parameterRepository, IProcessStepOrderRepository processStepOrderRepository, IUnitOfWork unitOfWork, IActionTypeRepository actionTypeRepository) {
             _resultTypeRepository = resultTypeRepository;
             _stateRepository = stateRepository;
             _processStepRepository = processStepRepository;
             _processRepository = processRepository;
             _parametersRepository = parameterRepository;
             _processStepOrderRepository = processStepOrderRepository;
+            _unitOfWork = unitOfWork;
+            _actionTypeRepository = actionTypeRepository;
         }
         
         public ActionResult Index()
@@ -46,7 +52,7 @@ namespace ScripturePublishing.Controllers
             {
                 var processStep = _processStepRepository.GetById(stateData.ProcessStepID);
 
-                var processType = _processRepository.GetById(processStep.ActionTypeID).Name;
+                var processType = _actionTypeRepository.GetById(processStep.ActionTypeID).ActionName;
                 var parameterData = GetParameterDataForProcessStep(processStep.ID);
 
                 var step = StepFactory.GetStep(processType, parameterData, stateData.LastStepData);
@@ -59,7 +65,7 @@ namespace ScripturePublishing.Controllers
                 returnToPage = result.DisplayToUser;
             }
 
-            ViewBag.Mesages = result.PageMessages;
+            ViewBag.MessageLines = String.Join("<br />", result.PageMessages);
             return View("index");
         }
 
@@ -68,7 +74,7 @@ namespace ScripturePublishing.Controllers
         {
             var state = GenerateNewState(processId);
             _stateRepository.Add(state);
-
+            _unitOfWork.Save();
             return Index();
         }
 
@@ -82,6 +88,7 @@ namespace ScripturePublishing.Controllers
             var state = _stateRepository.GetById(stateId);
             state.ProcessStepID = stepId;
             state.LastStepData = dataToPersist;
+            _unitOfWork.Save();
         }
 
         private Dictionary<String, String> GetParameterDataForProcessStep(int processStepId)

@@ -14,7 +14,8 @@ namespace ScripturePublishing.Steps
 
         public StepBase(Dictionary<String, String> parameterData, String lastStepData)
         {
-           
+            this.parameterData = parameterData;
+            this.lastStepData = lastStepData;
         }
 
         public abstract StepResult RunStep();

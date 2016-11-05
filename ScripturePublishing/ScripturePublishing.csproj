@@ -229,6 +229,7 @@
     <Compile Include="Models\ProcessStepDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Steps\DisplayAndShowInputStep.cs" />
     <Compile Include="Steps\DisplayMessageStep.cs" />
     <Compile Include="Steps\StepBase.cs" />
     <Compile Include="Steps\StepFactory.cs" />
@@ -300,12 +301,12 @@
     <Content Include="Views\ProcessStep\Edit.cshtml" />
     <Content Include="Views\ProcessStepOrder\Index.cshtml" />
     <Content Include="Views\ProcessStepOrder\Edit.cshtml" />
-
     <Content Include="Views\Parameter\Index.cshtml" />
     <Content Include="Views\Parameter\Edit.cshtml" />
     <Content Include="Views\Step\ChooseProcess.cshtml" />
     <Content Include="Views\Step\index.cshtml" />
-  </ItemGroup>  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

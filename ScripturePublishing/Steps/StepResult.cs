@@ -14,6 +14,7 @@ namespace ScripturePublishing.Steps
         public StepResult(String resultText, IEnumerable<String> PageMessages)
         {
             ResultText = resultText;
+            this.PageMessages = PageMessages;
         }
 
         public String ResultText { get; private set; }
@@ -26,7 +27,7 @@ namespace ScripturePublishing.Steps
         {
             get
             {
-                return !PageMessages.Any();
+                return PageMessages != null && PageMessages.Any();
             }
         }
     }
