@@ -58,6 +58,20 @@
     <Compile Include="Entities\ResultType.cs" />
     <Compile Include="Entities\State.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\IStateRepository.cs" />
+    <Compile Include="Repositories\IResultTypeRepository.cs" />
+    <Compile Include="Repositories\IProcessStepOrderRepository.cs" />
+    <Compile Include="Repositories\IProcessStepRepository.cs" />
+    <Compile Include="Repositories\IProcessRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\StateRepository.cs" />
+    <Compile Include="Repositories\ResultTypeRepository.cs" />
+    <Compile Include="Repositories\ProcessStepOrderRepository.cs" />
+    <Compile Include="Repositories\ProcessStepRepository.cs" />
+    <Compile Include="Repositories\ProcessRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <Compile Include="WorkflowEngine.cs" />
   </ItemGroup>
   <ItemGroup>

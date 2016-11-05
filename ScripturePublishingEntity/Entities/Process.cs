@@ -1,4 +1,4 @@
-namespace ScripturePublishingEntity
+namespace ScripturePublishingEntity.Entities
 {
     using System;
     using System.Collections.Generic;
