@@ -1,3 +1,5 @@
+using ScripturePublishingEntity.Entities;
+
 namespace ScripturePublishingEntity
 {
     using System;

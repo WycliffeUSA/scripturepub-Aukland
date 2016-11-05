@@ -13,7 +13,7 @@ namespace ScripturePublishing
             var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
             builder.RegisterType<WorkflowEngine>().WithParameter("connection", connectionString).InstancePerRequest();
-           // builder.RegisterType<UnitOfWork<ApprovalServiceDbContext>>().As<IUnitOfWork>().InstancePerRequest();
+            builder.RegisterType<UnitOfWork<WorkflowEngine>>().As<IUnitOfWork>().InstancePerRequest();
 
             //Repositories
             builder.RegisterType<ProcessRepository>().As<IProcessRepository>().InstancePerRequest();
