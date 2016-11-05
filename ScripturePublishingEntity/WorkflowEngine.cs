@@ -10,7 +10,7 @@ namespace ScripturePublishingEntity
     public partial class WorkflowEngine : DbContext
     {
         public WorkflowEngine()
-            : base("name=WorkflowEngine")
+            : base("name=DefaultConnection")
         {
         }
 
@@ -19,7 +19,6 @@ namespace ScripturePublishingEntity
         public virtual DbSet<ProcessStepOrder> ProcessStepOrders { get; set; }
         public virtual DbSet<ResultType> ResultTypes { get; set; }
         public virtual DbSet<State> States { get; set; }
-        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

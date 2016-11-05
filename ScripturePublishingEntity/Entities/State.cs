@@ -13,17 +13,14 @@ namespace ScripturePublishingEntity.Entities
         [Column(Order = 0)]
         public int ID { get; set; }
 
-        [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProcessID { get; set; }
 
-        [Key]
         [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProcessStepID { get; set; }
 
-        [Key]
         [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserID { get; set; }

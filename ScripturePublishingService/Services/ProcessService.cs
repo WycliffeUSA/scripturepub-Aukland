@@ -1,4 +1,5 @@
-﻿using ScripturePublishingEntity.Repositories;
+﻿using ScripturePublishingEntity.Entities;
+using ScripturePublishingEntity.Repositories;
 
 namespace ScripturePublishingService.Services
 {
@@ -9,6 +10,11 @@ namespace ScripturePublishingService.Services
         public ProcessService(IProcessRepository processRepository)
         {
             _processRepository = processRepository;
+        }
+
+        public Process GetProcessById(int id)
+        {
+            return _processRepository.GetById(id);
         }
     }
 }

@@ -80,3 +80,11 @@ C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\Microsoft.Owin.Sec
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\obj\Debug\ScripturePublishing.csprojResolveAssemblyReference.cache
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\obj\Debug\ScripturePublishing.dll
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\obj\Debug\ScripturePublishing.pdb
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\Autofac.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\Autofac.Integration.Mvc.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\ScripturePublishingEntity.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\ScripturePublishingService.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\ScripturePublishingEntity.pdb
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\ScripturePublishingService.pdb
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\Autofac.xml
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishing\bin\Autofac.Integration.Mvc.xml

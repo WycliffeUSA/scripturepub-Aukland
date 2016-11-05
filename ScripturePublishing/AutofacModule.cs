@@ -21,7 +21,6 @@ namespace ScripturePublishing
             builder.RegisterType<ProcessStepOrderRepository>().As<IProcessStepOrderRepository>().InstancePerRequest();
             builder.RegisterType<ResultTypeRepository>().As<IResultTypeRepository>().InstancePerRequest();
             builder.RegisterType<StateRepository>().As<IStateRepository>().InstancePerRequest();
-            builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
 
             //Services
             builder.RegisterType<ProcessService>().As<IProcessService>().InstancePerRequest();
@@ -29,7 +28,6 @@ namespace ScripturePublishing
             builder.RegisterType<ProcessStepOrderService>().As<IProcessStepOrderService>().InstancePerRequest();
             builder.RegisterType<ResultTypeService>().As<IResultTypeService>().InstancePerRequest();
             builder.RegisterType<StateService>().As<IStateService>().InstancePerRequest();
-            builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
 
             base.Load(builder);
         }

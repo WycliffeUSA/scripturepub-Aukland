@@ -9,6 +9,7 @@ namespace ScripturePublishingEntity.Entities
     [Table("ResultType")]
     public partial class ResultType
     {
+        [Key]
         public int ID { get; set; }
 
         public string Description { get; set; }

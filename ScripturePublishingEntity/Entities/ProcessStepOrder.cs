@@ -17,7 +17,6 @@ namespace ScripturePublishingEntity.Entities
 
         public int? NextActionID { get; set; }
 
-        [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ResultTypeID { get; set; }

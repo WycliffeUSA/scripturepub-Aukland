@@ -16,7 +16,6 @@ namespace ScripturePublishingEntity.Entities
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Version { get; set; }

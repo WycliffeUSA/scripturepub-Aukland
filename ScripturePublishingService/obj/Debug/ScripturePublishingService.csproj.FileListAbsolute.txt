@@ -1,0 +1,12 @@
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\ScripturePublishingService.dll.config
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\ScripturePublishingService.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\ScripturePublishingService.pdb
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\EntityFramework.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\ScripturePublishingEntity.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\ScripturePublishingEntity.pdb
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\EntityFramework.xml
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\obj\Debug\ScripturePublishingService.csprojResolveAssemblyReference.cache
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\obj\Debug\ScripturePublishingService.dll
+C:\Projects\Self\scripturepub-Aukland\ScripturePublishingService\obj\Debug\ScripturePublishingService.pdb
