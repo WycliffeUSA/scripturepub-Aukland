@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Choose a workflow process to begin";
+}
+
+}
+
+<div class="jumbotron" style="background-color:#ffffff;">
+<br /><br /><br />
+</div>
+</div>
+    <form method="post" action="/Step" style="padding-top:250px margin-top:500px">
+        Choose a workflow process to begin.
+        @Html.DropDownList("processId", (IEnumerable<SelectListItem>)ViewBag.Processes)
+        <input type="submit" />
+    </form>

@@ -17,10 +17,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Scrip Pub workflow manager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+
+<li>@Html.ActionLink("Run workflow", "Index", "step")</li>
                     <li>@Html.ActionLink("Process", "Index", "Process")</li>
                     <li>@Html.ActionLink("ProcessStep", "Index", "ProcessStep")</li>
                     <li>@Html.ActionLink("ProcessStepOrder", "Index", "ProcessStepOrder")</li>
@@ -34,7 +36,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Wycliffe workflow manager 0.1 </p>
         </footer>
     </div>
 
