@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Parameter.cs" />
     <Compile Include="Entities\Process.cs" />
     <Compile Include="Entities\ProcessStep.cs" />
     <Compile Include="Entities\ProcessStepOrder.cs" />

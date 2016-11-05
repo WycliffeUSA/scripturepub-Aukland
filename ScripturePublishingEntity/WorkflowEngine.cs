@@ -19,6 +19,7 @@ namespace ScripturePublishingEntity
         public virtual DbSet<ProcessStepOrder> ProcessStepOrders { get; set; }
         public virtual DbSet<ResultType> ResultTypes { get; set; }
         public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<Parameter> Parameters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
