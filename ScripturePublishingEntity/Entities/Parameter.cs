@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScripturePublishingEntity.Entities
 {
+    [Table("Parameter")]
     public partial class Parameter
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(30)]
@@ -14,9 +14,10 @@ namespace ScripturePublishingEntity.Entities
 
         public int ProcessStepId { get; set; }
 
+        [Required]
         [StringLength(255)]
         public string Name { get; set; }
-        
+
         public string Text { get; set; }
     }
 }

@@ -28,5 +28,17 @@ namespace ScripturePublishing.Helpers
                 ResultTypeDescription = resultTypeDescription
             };
         }
+
+        public static ParameterDto MapDto(this Parameter parameter, int processStepId)
+        {
+            return new ParameterDto
+            {
+                ID = parameter.ID,
+                Name = parameter.Name,
+                ProcessStepId = processStepId,
+                Text = parameter.Text,
+                Type = parameter.Type
+            };
+        }
     }
 }

@@ -1,0 +1,56 @@
+﻿@using System.Web.Mvc.Html
+@using ScripturePublishing.Helpers
+@model List<ScripturePublishing.Models.ParameterDto>  
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function remove(id2) {
+        $.ajax({
+            url: "/Parameter/Delete/",
+            type: "POST",
+            contentType: "application/json",
+            data: { id:id2 },
+            success: function(response) {
+                response ? alert("It worked!") : alert("It didn't work.");
+            }
+        });
+        alert(id);
+    }
+</script>
+
+<h2>Parameters</h2>
+
+@using (Html.BeginForm("Index", "Parameter", FormMethod.Post))
+{
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Type</td>
+            <td>Name</td>
+            <td>Text</td>
+            <td>Process Step ID</td>
+        </tr>
+        @foreach (var parameter in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(parameter.ID.ToString(), "Edit", "Parameter", new { id = parameter.ID }, null)</td>
+                <td>@parameter.Type</td>
+                <td>@parameter.Name</td>
+                <td>@parameter.Text</td>
+                <td>@parameter.ProcessStepId</td>
+                @*<td><button>@Ajax.ActionLink("X", "Delete", "Process", new { id = process.Id }, new AjaxOptions { HttpMethod = "POST" })</button></td>*@
+                <td><button onclick="remove(@parameter.ID)">X</button></td>
+            </tr>
+        }
+        <tr>
+            <td>@(Model.Count + 1)</td>
+            <td>@Html.TextBox("type")</td>
+            <td>@Html.TextBox("name")</td>
+            <td>@Html.TextBox("text")</td>
+            <td>@Html.DropDownList("processStepId", ProcessStepHelper.GetProcessStepList())</td>
+        </tr>
+    </table>
+    <input type="submit" value="ADD" />
+}

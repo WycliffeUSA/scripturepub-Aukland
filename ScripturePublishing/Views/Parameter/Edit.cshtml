@@ -1,0 +1,27 @@
+﻿@using ScripturePublishing.Helpers
+@model ScripturePublishing.Models.ParameterDto
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Parameter</h2>
+
+@using (Html.BeginForm("Edit", "Parameter", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.ID)
+
+    <div>
+        Type: @Html.TextBoxFor(m => m.Type)
+    </div>
+    <div>
+        Name: @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div>
+        Text: @Html.TextBoxFor(m => m.Text)
+    </div>
+    <div>
+        Process Step ID: @Html.DropDownListFor(m => m.ProcessStepId, ProcessStepHelper.GetProcessStepList(Model.ProcessStepId))
+    </div>
+    <button>@Html.ActionLink("BACK", "Index", "Parameter")</button>
+    <input type="submit" value="UPDATE" />
+}

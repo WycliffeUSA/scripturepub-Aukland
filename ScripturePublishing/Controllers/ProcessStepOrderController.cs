@@ -9,18 +9,15 @@ namespace ScripturePublishing.Controllers
 {
     public class ProcessStepOrderController : Controller
     {
-        private readonly IProcessStepService _processStepService;
         private readonly IProcessStepOrderService _processStepOrderService;
         private readonly IResultTypeService _resultTypeService;
         private readonly IUnitOfWork _uow;
 
         public ProcessStepOrderController(
-            IProcessStepService processStepService,
             IProcessStepOrderService processStepOrderService,
             IResultTypeService resultTypeService,
             IUnitOfWork uow)
         {
-            _processStepService = processStepService;
             _processStepOrderService = processStepOrderService;
             _resultTypeService = resultTypeService;
             _uow = uow;

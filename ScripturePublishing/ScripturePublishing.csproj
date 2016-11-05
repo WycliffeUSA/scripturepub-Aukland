@@ -208,6 +208,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ParameterController.cs" />
     <Compile Include="Controllers\ProcessController.cs" />
     <Compile Include="Controllers\ProcessStepController.cs" />
     <Compile Include="Controllers\ProcessStepOrderController.cs" />
@@ -222,6 +223,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ParameterDto.cs" />
     <Compile Include="Models\ProcessStepOrderDto.cs" />
     <Compile Include="Models\ProcessStepDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,6 +295,8 @@
     <Content Include="Views\ProcessStep\Edit.cshtml" />
     <Content Include="Views\ProcessStepOrder\Index.cshtml" />
     <Content Include="Views\ProcessStepOrder\Edit.cshtml" />
+    <Content Include="Views\Parameter\Index.cshtml" />
+    <Content Include="Views\Parameter\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
