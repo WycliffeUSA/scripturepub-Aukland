@@ -5,6 +5,5 @@ C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\bin\Debug\Entity
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\bin\Debug\EntityFramework.SqlServer.dll
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\bin\Debug\EntityFramework.xml
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\bin\Debug\EntityFramework.SqlServer.xml
-C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\obj\Debug\ScripturePublishingEntity.csprojResolveAssemblyReference.cache
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\obj\Debug\ScripturePublishingEntity.dll
 C:\Projects\Self\scripturepub-Aukland\ScripturePublishingEntity\obj\Debug\ScripturePublishingEntity.pdb

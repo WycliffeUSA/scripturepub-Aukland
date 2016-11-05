@@ -50,12 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IParameterService.cs" />
     <Compile Include="Services\IUnitOfWork.cs" />
     <Compile Include="Services\IStateService.cs" />
     <Compile Include="Services\IResultTypeService.cs" />
     <Compile Include="Services\IProcessStepOrderService.cs" />
     <Compile Include="Services\IProcessStepService.cs" />
     <Compile Include="Services\IProcessService.cs" />
+    <Compile Include="Services\ParameterService.cs" />
     <Compile Include="Services\UnitOfWork.cs" />
     <Compile Include="Services\StateService.cs" />
     <Compile Include="Services\ResultTypeService.cs" />

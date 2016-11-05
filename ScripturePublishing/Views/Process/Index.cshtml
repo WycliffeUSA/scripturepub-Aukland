@@ -1,0 +1,32 @@
+﻿@model List<ScripturePublishingEntity.Entities.Process>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Processes</h2>
+
+@using (Html.BeginForm("Index", "Process", FormMethod.Post))
+{
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Version</td>
+        </tr>
+        @foreach (var process in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(process.Id.ToString(), "Edit", "Process", new { id = process.Id }, null)</td>
+                <td>@process.Name</td>
+                <td>@process.Version</td>
+                <td><button>@Html.ActionLink("X", "Delete", "Process", new { id = process.Id}, null)</button></td>
+            </tr>
+        }
+        <tr>
+            <td>@(Model.Count + 1)</td>
+            <td>@Html.TextBox("name")</td>
+            <td>@Html.TextBox("version")</td>
+        </tr>
+    </table>
+    <input type="submit" value="ADD"/>
+}

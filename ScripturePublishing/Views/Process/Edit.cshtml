@@ -1,0 +1,18 @@
+﻿@model ScripturePublishingEntity.Entities.Process
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Process</h2>
+
+@using (Html.BeginForm("Edit", "Process", FormMethod.Post))
+{
+    <div>
+        Process Name: @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div>
+        Process Version: @Html.TextBoxFor(m => m.Version)
+    </div>
+    <button >@Html.ActionLink("BACK", "Index", "Process")</button>
+    <input type="submit" value="UPDATE" />
+}

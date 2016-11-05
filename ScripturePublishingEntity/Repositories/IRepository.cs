@@ -25,11 +25,11 @@ namespace ScripturePublishingEntity.Repositories
 
         T GetById(object id);
 
-        void Add(T entity);
+        T Add(T entity);
 
         void Delete(T entityToDelete);
 
-        void Update(T entityToUpdate);
+        T Update(T entityToUpdate);
 
     }
 }

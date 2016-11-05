@@ -136,9 +136,9 @@ namespace ScripturePublishingEntity.Repositories
             return _dbSet.Find(id);
         }
 
-        public virtual void Add(TEntity entity)
+        public virtual TEntity Add(TEntity entity)
         {
-            _dbSet.Add(entity);
+            return _dbSet.Add(entity);
         }
 
         public virtual void Delete(TEntity entityToDelete)
@@ -150,10 +150,11 @@ namespace ScripturePublishingEntity.Repositories
             _dbSet.Remove(entityToDelete);
         }
 
-        public virtual void Update(TEntity entityToUpdate)
+        public virtual TEntity Update(TEntity entityToUpdate)
         {
             _dbSet.Attach(entityToUpdate);
             Context.Entry(entityToUpdate).State = EntityState.Modified;
+            return entityToUpdate;
         }
     }
 }
