@@ -1,0 +1,21 @@
+﻿@using ScripturePublishing.Helpers
+@model ScripturePublishing.Models.ProcessStepDto
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Process</h2>
+
+@using (Html.BeginForm("Edit", "ProcessStep", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.ID)
+
+    <div>
+        Action Type Name: @Html.TextBoxFor(m => m.ActionTypeId, ActionTypeHelper.GetActionTypeList(Model.ActionTypeId))
+    </div>
+    <div>
+        Process Name: @Html.TextBoxFor(m => m.ProcessId, ProcessHelper.GetProcessList(Model.ProcessId))
+    </div>
+    <button >@Html.ActionLink("BACK", "Index", "ProcessStep")</button>
+    <input type="submit" value="UPDATE" />
+}

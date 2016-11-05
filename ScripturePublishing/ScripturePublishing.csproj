@@ -210,12 +210,17 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Controllers\ProcessController.cs" />
+    <Compile Include="Controllers\ProcessStepController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ActionTypeHelper.cs" />
+    <Compile Include="Helpers\EntityMapping.cs" />
+    <Compile Include="Helpers\ProcessHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProcessStepDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -282,6 +287,8 @@
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\Process\Index.cshtml" />
     <Content Include="Views\Process\Edit.cshtml" />
+    <Content Include="Views\ProcessStep\Index.cshtml" />
+    <Content Include="Views\ProcessStep\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,50 @@
+﻿@model List<ScripturePublishing.Models.ProcessStepDto> 
+@using System.Web.Mvc.Html
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function remove(id2) {
+        $.ajax({
+            url: "/ProcessStep/Delete/",
+            type: "POST",
+            contentType: "application/json",
+            data: { id:id2 },
+            success: function(response) {
+                response ? alert("It worked!") : alert("It didn't work.");
+            }
+        });
+        alert(id);
+    }
+</script>
+
+<h2>Processes</h2>
+
+@using (Html.BeginForm("Index", "ProcessStep", FormMethod.Post))
+{
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Action Type Name</td>
+            <td>Process Name</td>
+        </tr>
+        @foreach (var processStep in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(processStep.ID.ToString(), "Edit", "ProcessStep", new { id = processStep.ID }, null)</td>
+                <td>@processStep.ActionTypeName</td>
+                <td>@processStep.ProcessName</td>
+                @*<td><button>@Ajax.ActionLink("X", "Delete", "Process", new { id = process.Id }, new AjaxOptions { HttpMethod = "POST" })</button></td>*@
+               <td><button onclick="remove(@processStep.ID)">X</button></td>
+            </tr>
+        }
+        <tr>
+            <td>@(Model.Count + 1)</td>
+            <td>@Html.DropDownList("actionTypeId", GetActionTypeList())</td>
+            <td>@Html.DropDownList("processId", GetProcessList())</td>
+        </tr>
+    </table>
+    <input type="submit" value="ADD"/>
+}

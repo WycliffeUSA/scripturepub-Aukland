@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ActionType.cs" />
     <Compile Include="Entities\Parameter.cs" />
     <Compile Include="Entities\Process.cs" />
     <Compile Include="Entities\ProcessStep.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Entities\ResultType.cs" />
     <Compile Include="Entities\State.cs" />
     <Compile Include="Repositories\IParameterRepository.cs" />
+    <Compile Include="Repositories\IActionTypeRepository.cs" />
     <Compile Include="Repositories\IStateRepository.cs" />
     <Compile Include="Repositories\IResultTypeRepository.cs" />
     <Compile Include="Repositories\IProcessStepOrderRepository.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="Repositories\IProcessRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ParameterRepository.cs" />
+    <Compile Include="Repositories\ActionTypeRepository.cs" />
     <Compile Include="Repositories\StateRepository.cs" />
     <Compile Include="Repositories\ResultTypeRepository.cs" />
     <Compile Include="Repositories\ProcessStepOrderRepository.cs" />

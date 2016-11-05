@@ -22,6 +22,7 @@ namespace ScripturePublishing
             builder.RegisterType<ResultTypeRepository>().As<IResultTypeRepository>().InstancePerRequest();
             builder.RegisterType<StateRepository>().As<IStateRepository>().InstancePerRequest();
             builder.RegisterType<ParameterRepository>().As<IParameterRepository>().InstancePerRequest();
+            builder.RegisterType<ActionTypeRepository>().As<IActionTypeRepository>().InstancePerRequest();
 
             //Services
             builder.RegisterType<ProcessService>().As<IProcessService>().InstancePerRequest();
@@ -30,6 +31,7 @@ namespace ScripturePublishing
             builder.RegisterType<ResultTypeService>().As<IResultTypeService>().InstancePerRequest();
             builder.RegisterType<StateService>().As<IStateService>().InstancePerRequest();
             builder.RegisterType<ParameterService>().As<IParameterService>().InstancePerRequest();
+            builder.RegisterType<ActionTypeService>().As<IActionTypeService>().InstancePerRequest();
 
             base.Load(builder);
         }

@@ -3,20 +3,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScripturePublishingEntity.Entities
 {
-    public partial class Parameter
+    [Table("ActionType")]
+    public partial class ActionType
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
-        [StringLength(30)]
-        public string Type { get; set; }
+        [StringLength(80)]
+        public string ActionName { get; set; }
 
-        public int ProcessStepId { get; set; }
+        [StringLength(200)]
+        public string ActionDescription { get; set; }
 
-        [StringLength(255)]
-        public string Name { get; set; }
-        
-        public string Text { get; set; }
+        public int? Version { get; set; }
     }
 }
