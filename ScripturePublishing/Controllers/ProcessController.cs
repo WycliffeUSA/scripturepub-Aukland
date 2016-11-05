@@ -32,12 +32,13 @@ namespace ScripturePublishing.Controllers
         [HttpPost]
         public ActionResult Index(string name, int? version)
         {
-            if (string.IsNullOrWhiteSpace(name) || version.HasValue)
+            if (string.IsNullOrWhiteSpace(name) || !version.HasValue)
                 return Index();
 
             _processService.Create(name, version.Value);
             _uow.Save();
-            return Index();
+
+            return RedirectToAction("Index");
         }
         
         [HttpPost]
@@ -51,7 +52,7 @@ namespace ScripturePublishing.Controllers
         [HttpPost]
         public ActionResult Delete(int id)
         {
-            //_processService.Delete(process);
+           // _processService.Delete(process);
             return Index();
         }
     }

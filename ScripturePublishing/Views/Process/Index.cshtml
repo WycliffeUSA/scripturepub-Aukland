@@ -3,6 +3,21 @@
     ViewBag.Title = "Index";
 }
 
+<script>
+    function remove(id2) {
+        $.ajax({
+            url: "/Process/Delete/",
+            type: "POST",
+            contentType: "application/json",
+            data: { id:id2 },
+            success: function(response) {
+                response ? alert("It worked!") : alert("It didn't work.");
+            }
+        });
+        alert(id);
+    }
+</script>
+
 <h2>Processes</h2>
 
 @using (Html.BeginForm("Index", "Process", FormMethod.Post))
@@ -19,13 +34,14 @@
                 <td>@Html.ActionLink(process.Id.ToString(), "Edit", "Process", new { id = process.Id }, null)</td>
                 <td>@process.Name</td>
                 <td>@process.Version</td>
-                <td><button>@Html.ActionLink("X", "Delete", "Process", new { id = process.Id}, null)</button></td>
+                @*<td><button>@Ajax.ActionLink("X", "Delete", "Process", new { id = process.Id }, new AjaxOptions { HttpMethod = "POST" })</button></td>*@
+               <td><button onclick="remove(@process.Id)">X</button></td>
             </tr>
         }
         <tr>
             <td>@(Model.Count + 1)</td>
-            <td>@Html.TextBox("name")</td>
-            <td>@Html.TextBox("version")</td>
+            <td>@Html.TextBox("name", "")</td>
+            <td>@Html.TextBox("version", "")</td>
         </tr>
     </table>
     <input type="submit" value="ADD"/>
