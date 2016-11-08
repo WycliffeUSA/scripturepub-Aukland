@@ -5,6 +5,6 @@
 <div class="jumbotron" style="background-color:#ffffff;">
     <br /><br /><br />
 </div>
-@ViewBag.MessageLines
+@Html.Raw(ViewBag.MessageLines)
 
 @Html.ActionLink("Next", "Index")

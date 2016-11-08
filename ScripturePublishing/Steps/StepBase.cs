@@ -1,4 +1,5 @@
-﻿using ScripturePublishingEntity.Repositories;
+﻿using ScripturePublishingEntity.Entities;
+using ScripturePublishingEntity.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,11 @@ namespace ScripturePublishing.Steps
 {
     public abstract class StepBase
     {
-        internal Dictionary<String, String> parameterData;
+        internal IEnumerable<Parameter> parameterData;
         internal String lastStepData;
         
 
-        public StepBase(Dictionary<String, String> parameterData, String lastStepData)
+        public StepBase(IEnumerable<Parameter> parameterData, String lastStepData)
         {
             this.parameterData = parameterData;
             this.lastStepData = lastStepData;

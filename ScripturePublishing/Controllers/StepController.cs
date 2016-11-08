@@ -91,9 +91,9 @@ namespace ScripturePublishing.Controllers
             _unitOfWork.Save();
         }
 
-        private Dictionary<String, String> GetParameterDataForProcessStep(int processStepId)
+        private IEnumerable<Parameter> GetParameterDataForProcessStep(int processStepId)
         {
-            return _parametersRepository.Get(x => x.ProcessStepId == processStepId).ToDictionary(x => x.Name, x => x.Text);
+            return _parametersRepository.Get(x => x.ProcessStepId == processStepId);
         }
 
 

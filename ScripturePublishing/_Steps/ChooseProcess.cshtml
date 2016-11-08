@@ -1,9 +1,0 @@
-﻿@{
-    ViewBag.Title = "Choose a workflow process to begin";
-}
-
-Choose a workflow process to begin.
-
-<form method="post" action="/Step">
-    @Html.DropDownList("processId", (IEnumerable<SelectListItem>)ViewBag.Processes)
-</form>
